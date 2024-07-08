@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: 'simple-client'
+  config:
+    import: optional:configserver:http://localhost:9091/
+
+management:
+  endpoints:
+    web:
+      exposures:
+        includes: '*'
+
+simple:
+  controller:
+    prefix:
+      version:
+        v1: 'app/v1'
